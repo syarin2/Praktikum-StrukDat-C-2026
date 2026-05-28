@@ -58,3 +58,18 @@ class Car:
 c1 = Car("Ford")
 c1.show()
 
+class Mobil:
+    def __init__(self, merek, warna):
+        self.merek = merek
+        self.warna = warna
+
+    # Menggunakan 'self' di dalam method untuk mengambil data objek tersebut
+    def cetak_info(self):
+        print(f"Mobil ini adalah {self.merek} berwarna {self.warna}")
+
+# Eksperimen dengan dua objek berbeda
+mobil_a = Mobil("Toyota", "Hitam")
+mobil_b = Mobil("Honda", "Putih")
+
+mobil_a.cetak_info()  # Output: Mobil ini adalah Toyota berwarna Hitam
+mobil_b.cetak_info()  # Output: Mobil ini adalah Honda berwarna Putih

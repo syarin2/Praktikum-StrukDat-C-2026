@@ -27,3 +27,17 @@ class Person:
     print("Hello, my name is " + self.name)
 p1 = Person("John", 36)
 p1.greet()
+
+class Mahasiswa:
+    # Constructor untuk inisialisasi properti/atribut
+    def __init__(self, nama, nim):
+        self.nama = nama  # Properti Nama
+        self.nim = nim    # Properti NIM
+
+# Membuat Object (Realisasi dari Class)
+mhs1 = Mahasiswa("Ahmad", "2307112001")
+mhs2 = Mahasiswa("Siti", "2307112002")
+
+# Mengakses properti object
+print(mhs1.nama)  # Output: Ahmad
+print(mhs2.nim)   # Output: 2307112002

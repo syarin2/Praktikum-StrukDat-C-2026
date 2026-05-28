@@ -69,13 +69,17 @@ print(p1.city)
 
 
 #example
-class Student:
-  def __init__(self, name, grade):
-    self.name = name
-    self.grade = grade
+class Karyawan:
+    # --- Class Property ---
+    nama_perusahaan = "PT. Maju Mundur" 
 
-s1 = Student("Anna", "A")
+    def __init__(self, nama, jabatan):
+        # --- Instance Property ---
+        self.nama = nama          
+        self.jabatan = jabatan    
 
-print(s1.grade)
-s1.grade = "B"
-print(s1.grade)
+# Memanggil Class Property langsung lewat Class maupun Object
+print(Karyawan.nama_perusahaan) # Output: PT. Maju Mundur
+
+karyawan1 = Karyawan("Budi", "Manager")
+print(karyawan1.nama_perusahaan) # Output: PT. Maju Mundur

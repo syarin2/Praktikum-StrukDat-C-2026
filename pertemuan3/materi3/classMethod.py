@@ -98,3 +98,31 @@ class Rectangle:
 
 r1 = Rectangle(5, 3)
 print(r1.area())
+
+class AkunBank:
+    total_nasabah = 0  # Class Property
+
+    def __init__(self, nama_pemilik):
+        self.nama_pemilik = nama_pemilik  # Instance Property
+        # Setiap ada objek baru dibuat, total nasabah bertambah
+        AkunBank.total_nasabah += 1 
+
+    # 1. Instance Method (Butuh data spesifik objek)
+    def sapa_nasabah(self):
+        print(f"Halo Selamat Datang, Kak {self.nama_pemilik}!")
+
+    # 2. Class Method (Mengolah data level Class global)
+    @classmethod
+    def tampilkan_total_nasabah(cls):
+        print(f"Total nasabah aktif saat ini: {cls.total_nasabah}")
+
+
+# --- Cara Penggunaan ---
+nasabah1 = AkunBank("Rian")
+nasabah2 = AkunBank("Dewi")
+
+# Memanggil Instance Method
+nasabah1.sapa_nasabah()  # Output: Halo Selamat Datang, Kak Rian!
+
+# Memanggil Class Method (bisa langsung lewat Class-nya tanpa bikin objek baru)
+AkunBank.tampilkan_total_nasabah()  # Output: Total nasabah aktif saat ini: 2
