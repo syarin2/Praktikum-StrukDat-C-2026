@@ -4,11 +4,13 @@ gudang_pc = [
 {"item": "Mouse", "harga": 250000, "stok": 20}
 ]
 
-gudang_pc[1]["kategori"] = "Aksesoris"
+for produk in gudang_pc:
+    if produk["item"] == "Keyboard":
+        produk["kategori"] = "Aksesoris"
 
-gudang_pc.append({"item": "Hedset", "harga": 350000, "stok":8},)
-print(gudang_pc)
+gudang_pc.append({"item": "Headset", "harga": 350000, "stok": 8})
 
-for x in gudang_pc:
-    total = x["harga"] * x["stok"]
-    print(f"item: {x["harga"]} | Total Aset: Rp{total}")
+print("--- Total Nilai Aset Gudang PC ---")
+for produk in gudang_pc:
+    total_aset = produk["harga"] * produk["stok"]
+    print(f"Item: {produk['item']} | Total Aset: Rp {total_aset}")
