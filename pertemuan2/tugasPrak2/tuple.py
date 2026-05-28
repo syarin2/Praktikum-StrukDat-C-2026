@@ -1,7 +1,6 @@
 #tuple.py
-
 data = ("Syarin", 19, "Informatika")
-print("Tuple:", data)
+print(data)
 
 print("Nama:", data[0])
 print("Umur:", data[1])

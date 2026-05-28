@@ -11,7 +11,6 @@ print("Nama:", data["nama"])
 data["kelas"] = "TI-C"
 print(data)
 
-
 data["umur"] = 19
 print(data)
 

@@ -1,22 +1,29 @@
-# list.py
-
+# list
 data = ["Anggur", "Apel", "Pir"]
 print("List:", data)
 
-print("Item pertama:", data[0])
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
 
 data.append("Go")
 print("Setelah tambah:", data)
 
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+print(len(thislist))
+print(type(thislist))
+
 # 4. Mengubah Data
-data[1] = "Apel Merah"
-print("Setelah diubah:", data)
+colors = ["red", "green", "blue"]
+colors[1] = "yellow"
+colors.append("purple")
 
-data.remove("Pir")
-print("Setelah hapus:", data)
+print("Setelah diubah:", colors)
+print("Jumlah isi:", len(colors))
 
-print("Jumlah isi:", len(data))
+colors.remove("red")
+print("Setelah hapus:", colors)
 
 print("Isi List:")
-for item in data:
+for item in colors:
     print(item)

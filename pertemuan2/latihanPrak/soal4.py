@@ -16,11 +16,17 @@ nilai_siswa["S04"] = {
 # 2. Hitung nilai akhir
 print("Nilai Akhir Siswa:")
 for kode, data in nilai_siswa.items():
-    nilai_akhir = (0.2 * data["tugas"]) + (0.3 * data["uts"]) + (0.5 * data["uas"])
-    print(f"{data['nama']} = {round(nilai_akhir, 2)}")
+    tugas = data["tugas"]
+    uts = data["uts"]
+    uas = data["uas"]
+
+    nilai_akhir = (tugas * 0.20) + (uts * 0.30) + (uas * 0.50)
+    print(f"Siswa: {data['nama']} | Nilai Akhir: {nilai_akhir:.2f}")
+
+print("\n--- Siswa dengan Nilai UAS di atas 80 ---")
 
 # 3. Tampilkan siswa dengan UAS > 80
 print("\nSiswa dengan nilai UAS > 80:")
-for data in nilai_siswa.values():
+for kode, data in nilai_siswa.items():
     if data["uas"] > 80:
-        print(data["nama"])
+        print(f"- {data['nama']} (Nilai UAS: {data['uas']})")

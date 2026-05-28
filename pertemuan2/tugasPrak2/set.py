@@ -1,6 +1,6 @@
 # set.py
 data = {"Python", "Java", "C++", "Python"}  
-print("Set:", data)
+print(data)
 
 data.add("Go")
 print("Setelah tambah:", data)
